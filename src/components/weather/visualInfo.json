@@ -1,0 +1,74 @@
+{
+  "weatherCodes": {
+    "sun": [0, 1],
+    "cloudSun": [2],
+    "clouds": [3],
+    "smog": [45, 48],
+    "cloudShowersHeavy": [
+      51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 71, 73, 75, 77, 80, 81, 82
+    ],
+    "snowflake": [85, 86],
+    "cloudBolt": [95, 96, 99]
+  },
+
+  "weatherInfo": {
+    "sun": {
+      "weatherIcons": "fa-solid fa-sun",
+      "weatherBackgrounds": "./clear.jpg",
+      "weatherDescriptions": "Clear",
+      "weatherColors": "card-header orange"
+    },
+    "cloudSun": {
+      "weatherIcons": "fa-solid fa-cloud-sun",
+      "weatherBackgrounds": "./cloudSun.jpg",
+      "weatherDescriptions": "partly cloudy",
+      "weatherColors": "card-header orange"
+    },
+    "clouds": {
+      "weatherIcons": "fa-solid fa-cloud",
+      "weatherBackgrounds": "./cloudy.jpg",
+      "weatherDescriptions": "Overcast",
+      "weatherColors": "card-header gray"
+    },
+    "smog": {
+      "weatherIcons": "fa-solid fa-smog",
+      "weatherBackgrounds": "./fog.jpg",
+      "weatherDescriptions": "Fog",
+      "weatherColors": "card-header gray"
+    },
+    "cloudShowersHeavy": {
+      "weatherIcons": "fa-solid fa-cloud-showers-heavy",
+      "weatherBackgrounds": "./rain.jpg",
+      "weatherDescriptions": "Rainy",
+      "weatherColors": "card-header blue"
+    },
+    "snowflake": {
+      "weatherIcons": "fa-solid fa-snowflake",
+      "weatherBackgrounds": "./snow.jpg",
+      "weatherDescriptions": "Snow",
+      "weatherColors": "card-header blue"
+    },
+    "cloudBolt": {
+      "weatherIcons": "fa-solid fa-cloud-bolt",
+      "weatherBackgrounds": "./thunderstorm.jpg",
+      "weatherDescriptions": "Thunderstorm",
+      "weatherColors": "card-header gray"
+    },
+    "else": {
+      "weatherIcons": "",
+      "weatherBackgrounds": "./else.jpg",
+      "weatherDescriptions": "",
+      "weatherColors": ""
+    }
+  },
+
+  "weekDays": [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ]
+}

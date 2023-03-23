@@ -52,6 +52,12 @@ export default function Sidebar(props) {
                 <span className="menu-nav-text">Website</span>
               </button>
             </li>
+            <li className="menu-nav-item">
+              <button className="button" name="weather" onClick={props.replace}>
+                <span className="fa-solid fa-cloud-sun-rain menu-nav-icon"></span>
+                <span className="menu-nav-text">Weather</span>
+              </button>
+            </li>
           </ul>
         </div>
 

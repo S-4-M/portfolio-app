@@ -4,6 +4,7 @@ import { useState } from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import WebsiteApp from "./components/website/WebsiteApp";
+import WeatherApp from "./components/weather/WeatherApp";
 
 export default function App() {
   const [content, setContent] = useState("home");
@@ -11,6 +12,7 @@ export default function App() {
   const contents = {
     home: <Home />,
     website: <WebsiteApp />,
+    weather: <WeatherApp />,
   };
 
   const Display = () => {

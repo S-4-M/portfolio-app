@@ -37,7 +37,7 @@ export default function Sidebar(props) {
           <div className="brand">
             <button className="button" name="home" onClick={props.replace}>
               <span className="fa-solid fa-arrow-right"></span>
-              <span>Sidebar</span>
+              <span>Portfolio</span>
             </button>
           </div>
         </div>

@@ -1,0 +1,243 @@
+:root {
+  --website-dark: rgba(30, 32, 40, 1);
+}
+
+.website .theme {
+  background: var(--website-dark);
+}
+
+.website .theme a {
+  color: white;
+  text-decoration: none;
+}
+
+/* navigation */
+
+.website nav {
+  height: 80px;
+}
+
+/* brand */
+
+.website .brand-link {
+  position: absolute;
+  top: 22px;
+  left: 5vw;
+  display: flex;
+}
+
+.website .brand-logo {
+  line-height: 0px;
+  font-size: 38px;
+}
+
+.website .brand-name {
+  margin: 3px 0 0 6%;
+  font-size: 32px;
+}
+
+/* button */
+
+.website .toggle-btn {
+  display: none;
+
+  position: absolute;
+  top: 20px;
+  right: 5vw;
+
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 32px;
+}
+
+/*navigation menu */
+
+.website .navigation-container {
+  height: 80px;
+  color: black;
+  box-shadow: 0px 0px 4px;
+}
+
+.website .navigation-menu {
+  position: absolute;
+  top: 32px;
+  left: 206px;
+  right: 80px;
+}
+
+.website .navigation-links {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.website .navigation-item {
+  list-style-type: none;
+}
+
+.website .nav-animate {
+  color: white;
+  text-decoration: none;
+  transition-duration: 400ms;
+}
+
+.website .navigation-item a:hover {
+  color: aqua;
+  /* background-color: white; */
+  text-decoration: underline;
+  transition-duration: 200ms;
+}
+
+/* main */
+
+.website .main-container {
+  text-align: center;
+}
+
+.website img.bg {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+
+  height: 100vh;
+  width: 100%;
+}
+
+.website .main-container-body {
+  padding: 0 0 14vh 0;
+}
+
+.website .main-header {
+  padding: 14vh 0 0 0;
+  position: absolute;
+  color: white;
+  top: 80px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+.website .main-heading {
+  font-size: 22vh;
+  line-height: 23vh;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.website .main-header .main-content p {
+  font-size: 3.8vh;
+}
+
+.website .main-content {
+  color: white;
+  z-index: -1;
+  padding: 0 15% 0 15%;
+}
+
+.website .main-content h2 {
+  margin: 3% 0 3% 0;
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.website .main-content p {
+  font-size: 3vh;
+  margin: 0;
+}
+
+/* footer */
+
+.website .footer-container {
+  position: sticky;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.website .footer-container section {
+  margin: auto;
+  width: 80vh;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 20px 0 20px 0;
+  font-size: 32px;
+}
+
+.website .copyright {
+  background-color: #0002;
+  color: gainsboro;
+}
+
+.website .footer-icon {
+  font-size: 20px;
+  color: white;
+  transition-duration: 200ms;
+}
+
+.website .footer-icon:hover {
+  font-size: 40px;
+  color: aqua;
+  transition-duration: 200ms;
+}
+
+/* responsive */
+
+@media (max-width: 120vh) {
+  .website .navigation-container {
+    transition-duration: 400ms;
+  }
+  .website .navigation-container.open {
+    padding-bottom: 300px;
+    transition-duration: 400ms;
+  }
+
+  .website .navigation-collapse {
+    visibility: collapse;
+  }
+
+  .website .navigation-container.open .navigation-collapse {
+    visibility: visible;
+    transition-delay: 320ms;
+  }
+
+  .website .navigation-menu {
+    left: 0;
+    top: 80px;
+
+    font-size: 20px;
+  }
+
+  .website .navigation-links {
+    display: block;
+  }
+
+  .website .navigation-item {
+    display: block;
+    padding: 5px 0 5px 5.3vw;
+  }
+
+  .website .toggle-btn {
+    display: block;
+    color: white;
+    z-index: 1;
+  }
+
+  .website .main-heading {
+    font-size: 16vw;
+    line-height: 17vw;
+  }
+
+  .website .main-content {
+    padding: 0 5% 5% 5%;
+  }
+
+  .website .footer-container section {
+    width: 70vw;
+  }
+}

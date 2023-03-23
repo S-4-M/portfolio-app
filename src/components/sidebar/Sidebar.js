@@ -46,7 +46,12 @@ export default function Sidebar(props) {
 
         <div className="menu-nav">
           <ul>
-
+            <li className="menu-nav-item">
+              <button className="button" name="website" onClick={props.replace}>
+                <span className="fa-solid fa-globe menu-nav-icon"></span>
+                <span className="menu-nav-text">Website</span>
+              </button>
+            </li>
           </ul>
         </div>
 

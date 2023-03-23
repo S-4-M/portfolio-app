@@ -3,12 +3,14 @@ import { useState } from "react";
 
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
+import WebsiteApp from "./components/website/WebsiteApp";
 
 export default function App() {
   const [content, setContent] = useState("home");
 
   const contents = {
     home: <Home />,
+    website: <WebsiteApp />,
   };
 
   const Display = () => {

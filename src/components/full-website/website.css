@@ -1,0 +1,264 @@
+:root {
+  --website-theme: rgba(0, 0, 0, 0.1);
+}
+
+#Website .bg-img {
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../../../public/full-website/websiteBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+
+  z-index: -1;
+}
+
+#Website .theme {
+  background: var(--website-theme);
+}
+
+/* navigation */
+
+#Website nav {
+  min-height: 80px;
+}
+
+/* brand */
+
+#Website .brand-link {
+  position: absolute;
+  top: 22px;
+  left: 5vw;
+  display: flex;
+}
+
+#Website .brand-logo {
+  line-height: 0px;
+  font-size: 38px;
+}
+
+#Website .brand-name {
+  margin: 3px 0 0 6%;
+  font-size: 32px;
+}
+
+/* button */
+
+#Website .toggle-btn {
+  display: none;
+
+  position: absolute;
+  top: 20px;
+  right: 5vw;
+
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 32px;
+}
+
+/*navigation menu */
+
+#Website .navigation-container {
+  height: 0px;
+  color: black;
+}
+
+#Website .navigation-container a {
+  color: white;
+  text-decoration: none;
+}
+
+#Website .navigation-menu {
+  position: absolute;
+  top: 32px;
+  left: 206px;
+  right: 80px;
+}
+
+#Website .navigation-links {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#Website .navigation-item {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+#Website .nav-animate {
+  color: white;
+  text-decoration: none;
+  transition-duration: 400ms;
+}
+
+#Website .navigation-item a:hover {
+  color: lime;
+  transition-duration: 200ms;
+}
+
+/* main */
+
+#Website .main-container {
+  min-height: 100vh;
+  max-width: 1280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  text-align: center;
+  margin: auto;
+  padding: 0 40px;
+
+  color: white;
+}
+
+#Website #hero {
+  padding: 40px 0;
+  margin-bottom: 120px;
+}
+
+#Website .main-heading {
+  font-size: clamp(80px, 12vw, 300px);
+  line-height: 1;
+  font-weight: bold;
+}
+
+#Website .main-opening p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+#Website .main-content h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#Website .main-content p {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+/* footer */
+
+#Website footer {
+  text-align: center;
+}
+
+#Website footer h2 {
+  color: white;
+  font-size: 24px;
+}
+
+#Website footer ul {
+  list-style: none;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  max-width: 600px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#Website footer ul li {
+  margin: 0 10px;
+}
+
+#Website .copyright {
+  background-color: #0002;
+}
+
+#Website .copyright p {
+  color: gainsboro;
+  margin: 0;
+}
+
+#Website .footer-icon {
+  font-size: 20px;
+  color: white;
+  transition-duration: 200ms;
+}
+
+#Website .footer-icon:hover {
+  font-size: 40px;
+  color: lime;
+  transition-duration: 200ms;
+}
+
+/* responsive */
+
+@media (max-width: 1200px) {
+  #Website.overflow-hidden {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #Website .navigation-container {
+    transition-duration: 400ms;
+  }
+  #Website .navigation-container.open {
+    background-color: var(--website-theme);
+    height: 100vh;
+    transition-duration: 400ms;
+  }
+
+  #Website .navigation-collapse {
+    visibility: collapse;
+  }
+
+  #Website .navigation-container.open .navigation-collapse {
+    visibility: visible;
+    transition-delay: 320ms;
+  }
+
+  #Website .navigation-menu {
+    /* abs */
+    top: 80px;
+    left: 0;
+    width: 100%;
+
+    text-align: center;
+    font-size: 50px;
+  }
+
+  #Website .navigation-links {
+    /* flex */
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+  }
+
+  #Website .navigation-item {
+    display: block;
+  }
+
+  #Website .toggle-btn {
+    display: block;
+    color: white;
+    z-index: 1;
+  }
+
+  #Website .main-container p {
+    font-size: 20px;
+  }
+
+  #Website .footer-container section {
+    width: 70vw;
+  }
+}
+@media (max-width: 768px) {
+  #Website .main-heading {
+    font-size: 16vw;
+  }
+}

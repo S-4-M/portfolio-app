@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* styles for body and sections */
+body {
+  font-family: "Open Sans", sans-serif;
+  /* font-family: Arial, sans-serif; */
+  background-color: #fff;
+  margin: 0;
+}
+
+/* Container Styles */
+.web-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* style header */
+#BusinessWeb header {
+  background-color: #50bbd4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 80px;
+  padding: 20px;
+}
+
+#BusinessWeb nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  /* align-items: center; */
+}
+#BusinessWeb nav #collapse {
+  display: flex;
+  align-items: center;
+}
+
+#BusinessWeb nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#BusinessWeb nav li {
+  margin: 0 10px;
+}
+
+#BusinessWeb nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+#BusinessWeb nav a:hover {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* nav button */
+
+#BusinessWeb nav button {
+  display: none;
+  color: black;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 33.5px;
+}
+
+/* Styles section */
+#BusinessWeb section:not(#hero, #call-to-action) {
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styles for the hero section */
+#BusinessWeb #hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../../public/business-web/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 184px 0;
+
+  /* margin: 20px 0; */
+  /* color: #fff; */
+  /* padding: 120px; */
+}
+
+#BusinessWeb #hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+
+  /* font-size: 50px; */
+  /* margin: 0; */
+
+  /* font-size: 3rem; */
+  /* margin-bottom: 20px; */
+}
+
+#BusinessWeb #hero p {
+  font-size: 1.5rem;
+  color: #50bbd4;
+
+  /* font-size: 24px; */
+  /* margin: 20px 0; */
+
+  /* font-size: 1.5rem; */
+  /* margin-bottom: 40px; */
+}
+
+/* Styles for the about-us section */
+#BusinessWeb #about-us {
+  /* background-color: #f0f2f5; */
+  text-align: center;
+  /* padding: 50px; */
+}
+
+#BusinessWeb #about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+  /* font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px; */
+}
+
+#BusinessWeb #about-us .content {
+  display: flex;
+  background-color: #f0f2f5;
+  padding: 20px 0;
+  border-radius: 25px;
+}
+
+#BusinessWeb #about-us .p-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 45px;
+}
+
+#BusinessWeb #about-us p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+
+  /* font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px; */
+}
+
+#BusinessWeb #about-us .circle {
+  width: 360px; /* adjust to your desired size */
+  height: 360px; /* adjust to your desired size */
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin: auto;
+}
+
+#BusinessWeb #about-us img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Style the services section */
+#BusinessWeb #services {
+  /* display: flex; */
+  /* flex-wrap: wrap;
+  justify-content: center; */
+  text-align: center;
+  /* background-color: #f0f2f5; */
+  /* padding: 50px 0; */
+}
+
+#BusinessWeb #services h2 {
+  font-size: 2rem;
+  /* margin-bottom: 20px; */
+  /* margin-top: 0; */
+}
+
+#BusinessWeb #services ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#BusinessWeb #services li {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#BusinessWeb #services li h3 {
+  font-size: 24px;
+  margin-top: 0;
+  /* margin-bottom: 20px; */
+}
+
+#BusinessWeb #services li img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* clamp fix */
+#BusinessWeb #services li p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* Style the features section */
+#BusinessWeb #features {
+  text-align: center;
+  /* background-color: #f0f2f5; */
+  padding: 50px 0px;
+  /* padding: 40px; */
+}
+
+#BusinessWeb #features h2 {
+  font-size: 2rem;
+  /* margin-bottom: 120px; */
+  /* margin-top: 0; */
+
+  /* font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px; */
+
+  /* font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px; */
+}
+
+#BusinessWeb #features ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+#BusinessWeb #features li {
+  width: 300px;
+  margin: 20px;
+  /* background-color: #f5f5f5; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* margin: 0 30px;
+  text-align: center; */
+
+  /* flex-basis: 300px;
+  margin: 20px; */
+}
+
+#BusinessWeb #features li h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#BusinessWeb #features .circle {
+  max-width: 260px;
+  height: 258px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+#BusinessWeb #features li img {
+  /* width: min(600px, 100%); */
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 20px; */
+  object-fit: cover;
+}
+
+#BusinessWeb #features li p {
+  font-size: 16px;
+  margin-bottom: 0;
+
+  /* font-size: 18px;
+  line-height: 1.6;
+  text-align: center; */
+}
+
+/* Style the testimonials section */
+#BusinessWeb #testimonials {
+  /* background-color: #f0f2f5; */
+  padding: 50px 0;
+  text-align: center;
+}
+
+#BusinessWeb #testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  /* margin-top: 0; */
+
+  /* font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px; */
+}
+
+#BusinessWeb #testimonials .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f0f2f5;
+  border-radius: 25px;
+}
+
+#BusinessWeb #testimonials .slider {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  width: 1080px;
+}
+
+#BusinessWeb #testimonials button {
+  width: 20px;
+  height: 140px;
+  /* border-radius: 5px; */
+  /* margin: 10px; */
+}
+
+#BusinessWeb #testimonials ul {
+  list-style: none;
+
+  display: flex;
+  /* justify-content: space-between; */
+
+  margin: 0;
+  padding: 0;
+
+  /*
+  justify-content: center;
+  align-items: center; */
+
+  width: calc(360px * 4);
+  /* height: 100%; */
+  transition: transform 0.5s ease-in-out;
+}
+
+#BusinessWeb #testimonials li {
+  width: 100%;
+  min-height: 160px;
+  padding: 20px;
+  margin: 20px;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  padding: 20px;
+  margin: 20px;
+
+  box-sizing: border-box;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin: 0 auto;
+  padding: 0; */
+
+  /* width: 33%;
+  margin: 0 30px;
+  text-align: center; */
+}
+
+#BusinessWeb #testimonials li p {
+  font-size: 16px;
+  /* margin-bottom: 20px; */
+  white-space: normal;
+
+  /* font-size: 1.2rem;
+  margin-bottom: 20px; */
+}
+
+#BusinessWeb #testimonials li cite {
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* style call-to-action section */
+#BusinessWeb #call-to-action {
+  background-color: #00bcd4;
+  text-align: center;
+  color: #fff;
+  padding: 100px 20px;
+}
+
+#BusinessWeb #call-to-action h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#BusinessWeb #call-to-action p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+#BusinessWeb #call-to-action button {
+  background-color: #fff;
+  color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#BusinessWeb #call-to-action button:hover {
+  background-color: #f0f0f0;
+}
+
+#BusinessWeb #get-started {
+  display: block;
+}
+
+#BusinessWeb #get-started.off {
+  display: none;
+}
+
+#BusinessWeb #sign-up {
+  display: none;
+  margin: auto;
+}
+
+#BusinessWeb #sign-up.on {
+  display: block;
+  max-width: 1200px;
+}
+
+#BusinessWeb #sign-up ul {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+  list-style: none;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+#BusinessWeb #sign-up li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: start;
+  /* margin: 20px; */
+  /* width: 30%; */
+  min-height: 180px;
+  border-left: 2px solid;
+  padding-left: 20px;
+}
+
+#BusinessWeb #sign-up li:nth-child(1) {
+  width: 40%;
+}
+
+#BusinessWeb #sign-up h6 {
+  font-size: 24px;
+  text-transform: uppercase;
+  /* margin-bottom: 10px; */
+}
+
+#BusinessWeb #sign-up p {
+  font-size: 16px;
+  margin: 0;
+}
+
+#BusinessWeb #sign-up a {
+  /* font-size: 16px; */
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+  /* margin-bottom: 15px; */
+}
+
+#BusinessWeb #sign-up i {
+  /* font-size: 16px; */
+  width: 16px;
+  margin-right: 20px;
+}
+
+/* style for footer */
+
+#BusinessWeb footer {
+  background-color: #333;
+  color: #fff;
+  /* padding: 50px 0; */
+  font-size: 14px;
+}
+
+#BusinessWeb footer section {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+#BusinessWeb footer ul {
+  list-style: none;
+  max-width: 600px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#BusinessWeb footer ul li {
+  margin: 0 10px;
+}
+
+#BusinessWeb footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition-duration: 200ms;
+}
+
+#BusinessWeb footer ul li a:hover {
+  color: #00fbfb;
+  font-size: 40px;
+  transition-duration: 200ms;
+}
+
+#BusinessWeb footer p {
+  text-align: center;
+  background-color: #0002;
+  color: gainsboro;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #BusinessWeb nav {
+    display: block;
+  }
+
+  #BusinessWeb nav button {
+    display: inline-block;
+  }
+
+  #BusinessWeb #collapse {
+    /* display: block; */
+    visibility: collapse;
+    transition-duration: 400ms;
+  }
+
+  #BusinessWeb #collapse.open {
+    visibility: visible;
+    padding-bottom: 300px;
+    transition-duration: 400ms;
+  }
+
+  #BusinessWeb #collapse ul {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 100px;
+
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #BusinessWeb #collapse.open ul {
+    display: flex;
+    flex-direction: column;
+    transition-delay: 280ms;
+  }
+
+  #BusinessWeb #about-us .circle {
+    display: none;
+  }
+
+  #BusinessWeb #about-us .p-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  #BusinessWeb nav a {
+    font-size: 32px;
+  }
+
+  #BusinessWeb #testimonials li {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  #BusinessWeb #sign-up ul {
+    /* display: block; */
+    flex-direction: column;
+  }
+
+  #BusinessWeb #sign-up li {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  #BusinessWeb #sign-up li:nth-child(1) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #BusinessWeb #testimonials ul {
+    width: calc(100% * 4);
+  }
+}

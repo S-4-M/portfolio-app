@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat");
+
+:root {
+  --home-card-w: rgba(255, 255, 255, 0.1);
+  --home-card-b: rgba(0, 0, 0, 0.1);
+  --creator-font: Caveat;
+}
+
+#Home {
+  text-align: center;
+}
+
+#Home .bg-img {
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../../../public/home-page/homeBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+#Home .creator {
+  text-align: end;
+  font-family: var(--creator-font);
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px 30px;
+}
+
+#Home .creator span {
+  background-image: linear-gradient(to right, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* #Home section {
+  margin: 80px 0;
+} */
+
+#Home h1 {
+  color: white;
+  line-height: 1.1;
+  text-align: center;
+  font-size: clamp(90px, 6vw, 270px);
+  padding: 30px;
+}
+
+#Home h1 :nth-child(1) {
+  white-space: nowrap;
+
+  color: lightblue;
+}
+
+#Home h1 :nth-child(3) {
+  font-weight: bold;
+
+  color: lemonchiffon;
+}
+
+#Home #resume {
+  /* padding-top: 20px; */
+  border-radius: 25px;
+
+  /* background-color: var(--home-card-b); */
+}
+
+#Home #resume nav ul {
+  display: flex;
+  justify-content: space-evenly;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+#Home #resume nav li {
+  font-size: clamp(20px, 2vw, 85px);
+}
+
+#Home #resume button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#Home #resume button a {
+  color: lavender;
+  text-decoration: none;
+}
+
+#resume h2 {
+  font-size: clamp(40px, 5vw, 210px);
+  text-align: start;
+
+  width: fit-content;
+  padding: 0 40px 0 60px;
+  margin: 0;
+
+  border-bottom: solid;
+  white-space: nowrap;
+}
+
+#resume .content {
+  display: flex;
+  align-items: center;
+}
+
+#resume i {
+  font-size: 8vw;
+  min-width: 15%;
+
+  background-image: linear-gradient(to right bottom, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: 30px;
+}
+
+#about-me {
+  color: lavender;
+  margin: 80px 0;
+}
+
+#about-me p {
+  font-size: clamp(20px, 1.75vw, 82px);
+
+  border-left: solid;
+
+  text-align: start;
+
+  margin: 30px;
+  padding: 0 30px;
+}
+
+#skills {
+  color: lavender;
+  text-align: center;
+  margin: 80px 0;
+}
+
+#skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  border-left: solid;
+
+  margin: 30px;
+  padding: 0;
+}
+
+#skills li {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  width: 200px;
+
+  margin: 10px;
+}
+
+#skills span {
+  font-size: clamp(24px, 2.2vw, 40px);
+  font-weight: bolder;
+
+  color: lavender;
+}
+
+#contact {
+  color: lavender;
+  margin-top: 80px;
+  padding-bottom: 1px;
+}
+
+#contact p {
+  font-size: clamp(24px, 2.2vw, 40px);
+  font-weight: bolder;
+
+  color: lavender;
+
+  border-left: solid;
+
+  margin: 30px;
+  padding: 0 30px;
+
+  flex-grow: 1;
+}
+
+footer {
+  color: white;
+}
+
+footer button {
+  border: none;
+  outline: none;
+
+  background: linear-gradient(to right bottom, #ff8a00, #e52e71);
+  border-radius: 25px;
+
+  padding: 10px;
+  margin: 20px;
+}
+
+footer span {
+  color: lavender;
+  font-size: 4vw;
+}
+
+#Home #resume a:hover {
+  background-image: linear-gradient(to right bottom, #ff8a00, #e52e71);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* responsive */
+
+@media (max-width: 1200px) {
+  #resume .content {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #Home h1 {
+    font-size: clamp(30px, 12vw, 90px);
+  }
+
+  #Home #resume nav ul {
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  #Home #resume nav li {
+    padding: 50px;
+  }
+
+  #about-me h2 {
+    white-space: normal;
+  }
+  #resume i {
+    padding: 30px 0 0 0;
+  }
+}

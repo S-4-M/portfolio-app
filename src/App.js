@@ -2,17 +2,23 @@ import React from "react";
 import { useState } from "react";
 
 import Sidebar from "./components/sidebar/Sidebar";
-import Home from "./components/home/Home";
-import WebsiteApp from "./components/website/WebsiteApp";
-import WeatherApp from "./components/weather/WeatherApp";
+import HomePage from "./components/home-page/Home";
+import LandingPage from "./components/landing-page/LandingPage";
+import FullWebsite from "./components/full-website/WebsiteApp";
+import WeatherApp from "./components/weather-app/WeatherApp";
+
+const test = () => {
+  console.log("Test!");
+};
 
 export default function App() {
-  const [content, setContent] = useState("home");
+  const [content, setContent] = useState("HomePage");
 
   const contents = {
-    home: <Home />,
-    website: <WebsiteApp />,
-    weather: <WeatherApp />,
+    HomePage: <HomePage />,
+    LandingPage: <LandingPage />,
+    FullWebsite: <FullWebsite />,
+    WeatherApp: <WeatherApp />,
   };
 
   const Display = () => {
@@ -27,13 +33,13 @@ export default function App() {
     if (Object.keys(contents).indexOf(checkContent) !== -1) {
       return setContent(() => checkContent);
     }
-    return setContent(() => "home");
+    return setContent(() => "HomePage");
   };
 
   return (
     <div className="app">
       <Display />
-      <Sidebar replace={changeContent} />
+      <Sidebar changeContent={changeContent} />
     </div>
   );
 }

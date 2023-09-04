@@ -1,7 +1,7 @@
 :root {
-  /* --sidebar-black: rgba(21, 21, 21, 1); */
   --sidebar-main: rgba(55, 56, 62, 1);
   --sidebar-dark: rgba(21, 21, 21, 1);
+  --sidebar-button: white;
   --sidebar-light: rgba(255, 255, 255, 1);
   --sidebar-hover: crimson;
 }
@@ -12,10 +12,14 @@
   box-sizing: border-box;
 }
 
-/* body {
-  min-height: 100vh;
-} */
-/* fix opacity */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
 
 /* sidebar */
 
@@ -34,22 +38,30 @@
 
 .sidebar .sidebar-button {
   position: fixed;
-  top: 8px;
-  left: 0px;
+  top: 7px;
+  /* left: 0px; */
   transition-delay: 10ms;
   transition-duration: 180ms;
+
   z-index: 99;
 }
 
+.sidebar .sidebar-button button span {
+  color: #ffe764;
+  animation-name: rgb-button;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
 .sidebar.open .sidebar-button {
-  /* left: 45vh; */
-  left: 275px;
+  left: 270px;
   transition-duration: 180ms;
 }
 
 .sidebar .sidebar-button span {
-  /* font-size: 4vh; */
-  font-size: 25px;
+  font-size: 27.5px;
+  color: var(--sidebar-button);
 }
 
 /* sidebar body */
@@ -91,13 +103,24 @@
 }
 
 .sidebar .brand {
-  margin: 0 0 0 5px;
+  margin: 0;
+}
+
+.sidebar .brand button {
+  text-transform: uppercase;
 }
 
 .sidebar .menu-header span {
-  /* font-size: 4vh; */
   font-size: 25px;
-  margin: 0 0 0 14px;
+}
+
+.sidebar .brand span:nth-child(1) {
+  margin: 0 16px;
+}
+
+.sidebar .brand span:nth-child(2) {
+  position: relative;
+  top: 1px;
 }
 
 /* sidebar menu */
@@ -177,11 +200,8 @@
 }
 
 .sidebar .menu-footer input {
-  height: 14px;
-  width: 14px;
-
-  /* height: 2.4vh; */
-  /* width: 2.4vh; */
+  height: 15px;
+  width: 15px;
 }
 
 /* theme */
@@ -207,7 +227,21 @@
   transition-duration: 200ms;
 }
 
+@keyframes rgb-button {
+  0% {
+    color: rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    color: #ffe764;
+  }
+}
+
 /* responsive */
 
-/* @media (max-width: 770px) {
-} ; */
+@media only screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
+  body {
+    width: 100vw;
+    background-color: black;
+  }
+}

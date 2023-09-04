@@ -1,3 +1,7 @@
+# React App Portfolio
+
+Welcome to my React App Portfolio! This portfolio showcases some of my web development projects built using React.js.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

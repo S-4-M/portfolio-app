@@ -1,6 +1,7 @@
 # React App Portfolio
 
-Welcome to my React App Portfolio! This portfolio showcases some of my web development projects built using React.js.
+Welcome to my React App Portfolio! This portfolio showcases some of my web development projects built
+using React.js. You can explore it at https://portfolio-w3b.web.app.
 
 # Getting Started with Create React App
 
